@@ -1,0 +1,3 @@
+variable "just" {
+  default="chandra"
+}
