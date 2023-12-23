@@ -1,3 +1,1 @@
-variable "just" {
-  default="chandra"
-}
+just = "chandra"
