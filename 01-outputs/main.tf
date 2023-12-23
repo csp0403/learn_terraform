@@ -13,3 +13,7 @@ variable "csp" {}
 output "shel" {
   value = var.csp
 }
+variable "domain" {}
+output "what" {
+  value = var.domain
+}
