@@ -1,7 +1,13 @@
 provider "aws" {
   region = "us-east-1"
-  version = "5.31.0"
 
+
+}
+
+terraform {
+  required_providers {
+    version= "5.31.0"
+  }
 }
 
 resource "aws_instance" "first_ec2" {
