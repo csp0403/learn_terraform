@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-east-1"
-  version = ""
+
 }
 
 resource "aws_instance" "first_ec2" {
