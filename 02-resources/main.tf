@@ -1,24 +1,15 @@
 
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "first_ec2" {
+resource "aws_instance" "first" {
   ami = data.aws_ami.example.id
   instance_type = "t3.micro"
-  security_groups = [aws_security_group.allow_tls.id]
+  vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   tags = {
-  Name="Automation_ec2"
+  Name ="Automation_ec2"
   }
 
 }
