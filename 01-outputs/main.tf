@@ -9,3 +9,7 @@ output "sa" {
 output "shekar1" {
   value = var.shekar
 }
+variable "csp" {}
+output "shel" {
+  value = var.csp
+}
