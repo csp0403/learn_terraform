@@ -8,3 +8,7 @@ module "ec2" {
   sg_id = module.sg.security_group_id
 
 }
+
+output "public_ip" {
+  value = module.ec2
+}
