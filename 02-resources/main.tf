@@ -59,3 +59,6 @@ resource "aws_security_group" "allow_tls" {
 output "sg_out_id" {
   value = aws_security_group.allow_tls.id
 }
+output "intance_vpc" {
+  value = aws_instance.first.vpc_security_group_ids
+}
