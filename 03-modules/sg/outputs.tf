@@ -6,5 +6,5 @@ output "sg_id" {
 }
 
 output "ou" {
-  value = aws_security_group.allow_tls.provider
+  value = aws_security_group.allow_tls.vpc_id
 }
