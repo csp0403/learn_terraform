@@ -3,13 +3,14 @@ provider "aws" {
 }
 
 resource "aws_instance" "first" {
+  for_each = var.component
   ami = data.aws_ami.example.id
-  instance_type = "t3.micro"
+  instance_type = each.value.instance_type
   vpc_security_group_ids = [var.sg_id]
   availability_zone = "us-east-1a"
 
   tags = {
-    Name ="Automation_ec2"
+    Name = each.value.Name
   }
 
 }
