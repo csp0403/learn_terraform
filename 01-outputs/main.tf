@@ -17,3 +17,8 @@ variable "domain" {}
 output "what" {
   value = var.domain
 }
+
+variable "domain1" {}
+output "domain1" {
+  value = var.domain1
+}
