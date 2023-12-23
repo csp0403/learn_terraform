@@ -1,5 +1,3 @@
-output "public_ip" {
-  value = {
-    for k, v in aws_instance.DevSeCops: k=> v.public_ip
-  }
+output "ec2" {
+  value = aws_instance.DevSeCops
 }
