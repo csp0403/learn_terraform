@@ -11,3 +11,18 @@ resource "aws_instance" "DevSeCops" {
   }
 
 }
+resource "null_resource" "provisioner" {
+
+  provisioner "remote_exec" {
+    connection {
+      host = aws_instance.DevSeCops.public_ip
+      user = root
+      password = DevOps321
+    }
+
+    inline = [
+      "yum update"
+    ]
+
+  }
+}
