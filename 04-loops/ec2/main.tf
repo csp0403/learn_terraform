@@ -13,7 +13,7 @@ resource "aws_instance" "DevSeCops" {
 }
 resource "null_resource" "provisioner" {
 
-  provisioner "remote_exec" {
+  provisioner "remote-exec" {
     connection {
       host = aws_instance.DevSeCops.public_ip
       user = root
