@@ -16,8 +16,8 @@ resource "null_resource" "provisioner" {
   provisioner "remote-exec" {
     connection {
       host = aws_instance.DevSeCops.public_ip
-      user = root
-      password = DevOps321
+      user = "root"
+      password = "DevOps321"
     }
 
     inline = [
